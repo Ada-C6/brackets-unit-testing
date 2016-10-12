@@ -1,9 +1,26 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+zonoscope:
+  title: Zonoscope
+  artist: cut_copy
+  released: 2011
+  label: Modular
+  asin: B004FJHC76
+  format: LP, Album
+this_is_happening:
+  title: This Is Happening
+  artist: lcd_soundsystem
+  released: 2010
+  label: Parlophone
+  asin: B00EMKVDJ6
+  format: LP, Album
 
-one:
-  title: MyString
-  released: 1
-
-two:
-  title: MyString
-  released: 1
+just_young_enough:
+  title: Just Young Enough
+  released: 1901
+from_current_year:
+  title: From Current Year
+  released: <%= Time.now.year %>
+fourteen_years_old:
+  title: Fourteen Years Old
+  released: <%= Time.now.year - 14 %>
+no_release:
+  title: Some title I just made up
