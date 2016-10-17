@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :artists
+  resources :artists do
+    resources :albums, only: [:index, :new, :create]
+  end
+
+  resources :albums, except: [:new, :create]
 
 
   # The priority is based upon order of creation: first created -> highest priority.
