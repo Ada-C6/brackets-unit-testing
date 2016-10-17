@@ -3,12 +3,18 @@ class ArtistsController < ApplicationController
   end
 
   def new
+    @artist = Artist.new
   end
 
   def create
   end
 
   def show
+    begin
+      @artist = Artist.find(params[:id])
+    rescue ActiveRecord::RecordNotFound => err
+      render "/errors/not_found", status: :not_found
+    end
   end
 
   def edit
